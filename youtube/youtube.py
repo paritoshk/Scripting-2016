@@ -37,7 +37,7 @@ def makeRequest(url, hdr):
 
 def list_movies(movies):
     for idx, (title, _) in enumerate(movies):
-        yield '[{}] {}'.format(idx, title.decode('utf-8').encode(sys.stdout.encoding))
+        yield '{} - {}'.format(idx, title.decode('utf-8').encode(sys.stdout.encoding))
 
 def search_videos(query):
     response = makeRequest('https://www.youtube.com/results?search_query=' + query, {})
